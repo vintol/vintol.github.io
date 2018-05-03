@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Element Card - Group 11 element</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #eeeeee;
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 400;
+            font-size: 16px;
+            background: -webkit-linear-gradient(315deg, #2980b9 0%, #9b59b6 100%);
+            background: linear-gradient(135deg, #2980b9 0%, #9b59b6 100%) no-repeat center center fixed;
+            background: linear-gradient(135deg, #D4145A 0%, #FBB03B 100%) no-repeat center center fixed;
+            background-size: cover;
+            height: auto;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Courgette', cursive;
+            color: #bd1675;
+            font-weight: 300;
+            font-size: 40px;
+        }
+
+        a.btn {
+            display: inline-block;
+            background-color: white;
+            padding: 5px 15px;
+            margin: 2px 0 0 0;
+            color: #eee;
+            align: center;
+            background-color: #3498db;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+
+        .vintol {
+            grid-area: vintol;
+            position: relative;
+            font-size: 40px;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .kumar {
+            grid-area: kumar;
+            font-size: 80px;
+            position: relative;
+            font-family: 'Courgette', cursive;
+            color: #1d0530;
+            padding: 20px;
+            margin: 20px;
+        }
+
+
+        .card {
+            grid-area: card;
+            height: 120px;
+            width: 400px;
+            color: #325235;
+            font-size: 30px;
+            background: #ffffff;
+            border: solid white 4px;
+            border-radius: 20px;
+            display: grid;
+            margin: 10px auto;
+            padding: 20px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            grid-gap: 10px;
+            grid-template-areas: "l1 l2" "l3 l4";
+        }
+
+        .container {
+            display: grid;
+            margin: 10px auto;
+            padding: 20px;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+            grid-gap: 50px;
+            grid-template-areas: "kumar blank" "vintol blank" "misc card"
+        }
+
+        @media screen and (min-width: 100px) and (max-width: 600px) {
+            .container {
+                display: grid;
+                margin: 10px auto;
+                padding: 20px;
+                grid-template-columns: 1fr 2fr;
+                grid-template-rows: auto;
+                grid-gap: 50px;
+                grid-template-areas: "blank kumar " "blank vintol" "blank card"
+            }
+        }
+
+        @media screen and (min-width: 600px) {
+            .container {
+                display: grid;
+                margin: 10px auto;
+                padding: 20px;
+                grid-template-columns: auto;
+                grid-template-rows: auto;
+                grid-gap: 50px;
+                grid-template-areas: "kumar blank" "vintol blank" "misc card"
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="kumar">Tejaskumar</div>
+        <div class="vintol"> vintol.github.io</div>
+
+        <div class="card" style="grid-area:card">
+            <a class="btn" href="blog" style="grid-area: l1;">Blog</a>
+            <a class="btn" href="apps" style="grid-area: l2;">Apps</a>
+            <a class="btn" href="projects" style="grid-area: l3;">Projects</a>
+            <a class="btn" href="resume" style="grid-area: l4;">Resume</a>
+        </div>
+
+
+
+</body>
+
+</html>
